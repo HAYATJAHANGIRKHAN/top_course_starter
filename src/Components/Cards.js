@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from './Card'
 
 export default function Cards({courses}) {
     let allCourses = [];
@@ -14,7 +15,7 @@ export default function Cards({courses}) {
   return (
     <div>
       {getCourses().map((course) =>{
-        <CardsCard/>
+       return <Card key={course.id}      coure={course} />
       })
       }
     </div>
