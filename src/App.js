@@ -11,10 +11,10 @@ const App = () => {
     const fetchData = async () => {
       try {
         const res = await fetch(apiUrl);
-        const data = await res.json();
+        const output = await res.json();
         //save data into a variable
         // console.log(data);
-        setCourses(data.data);
+        setCourses(output.data);
       }
       catch (error) {
      toast.error(" something went wrong");
@@ -30,7 +30,7 @@ const App = () => {
         filterData={filterData}
 
       />
-      <Cards />
+      <Cards  courses={courses}/>
     </div>
   )
 };
