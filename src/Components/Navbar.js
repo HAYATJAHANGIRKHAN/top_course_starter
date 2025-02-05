@@ -1,13 +1,12 @@
 import React from 'react'
-
-const Navbar = () => {
+import './Spinner.css';
+const Spinner = () => {
   return (
-    <div>
-      <nav>
-        <h1>Top Courses</h1>
-      </nav>
+    <div className='flex items-center flex-col space-y-2'>
+        <div className="spinner"></div>
+        <p className='text-lg text-bgDark font-semibold'>Loading...</p>
     </div>
   )
 }
 
-export default Navbar;
+export default Spinner
